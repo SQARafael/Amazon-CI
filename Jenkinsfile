@@ -21,15 +21,18 @@ pipeline {
   }
   post {
       always {
+          deleteDir()
+          echo "fase always"
 
-           sh "echo 'fase always'"
       }
       success {
-            sh "echo 'fase success'"
+            echo "fase success"
+
         }
 
       failure {
-            sh "echo 'fase failure'"
+            echo "fase failure"
+
       }
 
   }
