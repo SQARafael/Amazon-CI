@@ -13,11 +13,17 @@ pipeline {
   stages {
 
  stage("Build"){
+       steps {
+           script {
+            bat "git clone https://github.com/SQARafael/Amazon-CI.git"
+
+         }
+       }
 
       steps {
           script {
            bat "${GRADLE_HOME}\\gradle build"
-           echo "Hola mundo"
+
         }
       }
     }
