@@ -7,13 +7,16 @@ pipeline {
   agent any
   environment {
     appName = "variable"
+    GRADLE_HOME = tool 'Gradle'
+    PATH = "${GRADLE_HOME}/bin:${env.PATH}"
   }
   stages {
 
- stage("paso 1"){
+ stage("Build"){
 
       steps {
           script {
+           sh "${GRADLE_HOME}/bin/gradle build"
            echo "Hola mundo"
         }
       }
