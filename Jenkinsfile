@@ -18,6 +18,7 @@ pipeline {
       steps {
           script {
            bat "git clone https://github.com/SQARafael/Amazon-CI.git"
+           bat "cd Amazon-CI"
            bat "${GRADLE_HOME}\\gradle build"
 
         }
