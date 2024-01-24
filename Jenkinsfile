@@ -16,7 +16,7 @@ pipeline {
 
       steps {
           script {
-           bat "${GRADLE_HOME}/gradle build"
+           bat "${GRADLE_HOME}\\gradle build"
            echo "Hola mundo"
         }
       }
